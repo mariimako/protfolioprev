@@ -7,9 +7,23 @@ const URL = "https://teachablemachine.withgoogle.com/models/JlNgne5qd/";
 let model, webcam, labelContainer, maxPredictions;
 
 // Load the image model and setup the webcam
-async function end() {
-  window.location.reload();
+function end() {
+  // Stop the webcam
+  if (webcam) {
+    webcam.stop();
+    webcam = null;
+  }
+
+  // Clear model references
+  model = null;
+
+  // Clean up DOM elements
+  const webcamContainer = document.getElementById("webcam-container");
+  const labelContainer = document.getElementById("label-container");
+  webcamContainer.parentNode.removeChild(webcamContainer);
+  labelContainer.parentNode.removeChild(labelContainer);
 }
+
 
 document.addEventListener("DOMContentLoaded", function() {
     // Code to be executed after the HTML document is fully loaded

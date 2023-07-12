@@ -13,7 +13,20 @@
   <link href="https://getbootstrap.com/docs/4.0/examples/cover/cover.css" rel="stylesheet">
   
 </head>
-<body>
+<body class = "cover-container d-flex h-50 p-3 mx-auto flex-column">
+
+  <header class="masthead mr-auto ml-auto mb-auto">
+    <div class ="text-center">
+      <h3 class="masthead-brand">Learn JSL with Tensorflow</h3>
+    </div>
+    <div class="center">
+      <nav class="nav nav-masthead justify-content-center">
+        <a class="nav-link" href="../index.htm">Home</a>
+        <a class="nav-link" href="../about.html">About</a>
+      </nav>
+    </div>
+  </header>
+
   <section id = "webcam-section">
     <div id = "title" class="text-center">Detect Characters か〜こ</div>
     <div id="webcam-container"></div>
@@ -34,6 +47,6 @@
 <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@0.8/dist/teachablemachine-image.min.js"></script>
   
   <!-- JavaScript Code -->
-  <script src="js/a-oscript.js"></script>
+  <script src="modelAPI/ka-koscript.js"></script>
 </body>
 </html>
